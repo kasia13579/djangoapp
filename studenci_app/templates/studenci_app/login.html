@@ -1,0 +1,14 @@
+{% extends 'szablon.html' %}
+<title>{% block tytul %}Lista Miast{% endblock tytul %}</title>
+
+{% block naglowek %}Miasta{% endblock naglowek %}
+
+{% block tresc %}
+<h2>Dodaj miasto</h2>
+    <form action="." method="POST">
+    {% csrf_token %}
+        <br>
+        <input type="submit" value="Zapisz" class="btn">
+    </form>
+
+{% endblock tresc %}
